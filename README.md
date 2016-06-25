@@ -37,7 +37,7 @@ Gateway <gateway-ip>
 ```
 In the Users tab, optionally give the Administrator account a password. 
 
-In the Settings tab: Lights-Out Functionality Enabled. Optionally [set up the ILOM](https://github.com/rleir/virt-shoe/ILOM.md)
+In the Settings tab: Lights-Out Functionality Enabled. Optionally [set up the ILOM](https://github.com/rleir/virt-shoe/blob/master/ILOM.md)
 
 Now that the ILOM is working, the keyboard and display are not needed, and you can access the console via the ILOM from any PC. When you reboot the server, the ILOM allows you to view the whole thing, except that you may have to restart the browser plugin when you have reset the server.
 
