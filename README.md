@@ -1,6 +1,6 @@
 # virt-shoe
 
-## Given a server with no operating system loaded, how quickly can you have it up ready to host virtual servers or containers? For us, about an hour, mostly unattended.
+## Given a server with no operating system loaded, how quickly can you have it up ready to host virtual servers or containers? For us, about an hour, mostly unattended.:sleeping:
 
 This project uses Cobbler, Puppet and OpenVZ to do just that.
 
@@ -24,7 +24,7 @@ Press a key, and within 5 seconds you will see 'press CTRL-s for PXEboot options
 
 If you want to skip the long POST and get to the next step, press 'ESC'. This works at several places in the BIOS/POST startup. 
 
-**Be ready** for the ILOM options. After the PXE boot is set up, you will see a prompt for ILOM: **You now have a second** to press F8.
+**Be ready** for the ILOM options. After the PXE boot is set up, you will see a prompt for ILOM::boom: **You now have a second** to press F8.
 
 In the Network Configuration tab: Disable DHCP because we don't want to be depending on a DHCP server when things are going wrong. Other settings: 
 ```
