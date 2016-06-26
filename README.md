@@ -1,16 +1,17 @@
 # virt-shoe
 
-## Given a server with no operating system loaded, how quickly can you have it up ready to host virtual servers or containers? For us, about an hour, mostly unattended.:sleeping:
+## Given a server with no operating system loaded, how quickly can you have it up ready to host virtual servers or containers? With this project, about an hour, mostly unattended.:sleeping:
 
-This project uses Cobbler, Puppet and OpenVZ to do just that.
+### Introduction
+This project uses Cobbler, and Puppet. Virtualization uses OpenVZ (future: Docker, LXC and KVM).
 
-Hardware: we use HP 1U E5620 servers with 96G RAM and a few terabytes of disk space. More or less would be fine. 
+Hardware: we use HP 1U E5620 servers with 96G RAM and a few terabytes of disk space. Future: configurable to support other types of servers. We need to experiment to learn what is the pracical minimum RAM size.
 
-A support server serves PXE boot, and has the Puppet master. We named it Borvo2, and you will see this name upon occasion below. 
+A support server serves PXE boot, and has the Puppet master. We named it Borvo2, and you will see this name upon occasion below. Install virt-shoe on the support server Borvo2, then follow the steps below to load a blank server.
 
-Follow the steps below to load a blank server (assuming that virt-shoe has been installed on the support server Borvo2).
+### Steps
 
-Connect the network (vlan100 and 200) to the leftmost (looking from the back) RJ45 port. Connect a second network cable to the next RJ45 port. This second cable is only used during installation, and is used without vlan tagging (no configuration needed in the support server). The Mikrotik switch is set up with this port different from the others, to connect this cable with vlan200 and hence the Borvo2 server. This second cable can be disconnected after the installation is finished, but we should keep track of which Mikrotik port is used for this, ready for whenever a new server will be installed.
+Start with a new, blank server. Connect the network (vlan100 and 200) to the leftmost (looking from the back) RJ45 port. Connect a second network cable to the next RJ45 port. This second cable is only used during installation, and is used without vlan tagging (no configuration needed in the support server). The Mikrotik switch is set up with this port different from the others, to connect this cable with vlan200 and hence the Borvo2 server. This second cable can be disconnected after the installation is finished, but we should keep track of which Mikrotik port is used for this, ready for whenever a new server will be installed.
 
 Connect a keyboard and display. 
 
@@ -41,7 +42,7 @@ In the Settings tab: Lights-Out Functionality Enabled. Optionally [set up the IL
 
 Now that the ILOM is working, the keyboard and display are not needed, and you can access the console via the ILOM from any PC. When you reboot the server, the ILOM allows you to view the whole thing, except that you may have to restart the browser plugin when you have reset the server.
 
-Start the server. If it is not in its default state new-from-HP, then in the BIOS go to 'System Default Options' and choose the option to Restore Settings/Erase Boot Disk. At this point you may have to restart the Remote Console in the browser plugin. 
+Start the server. If it is not in its default state new-from-HP, then in the BIOS go to 'System Default Options' and choose the option to Restore Settings/Erase Boot Disk. If the RAID settings are not to your liking, change them.
 
 In the BIOS go to
 ```
