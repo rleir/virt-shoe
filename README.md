@@ -2,10 +2,12 @@
 
 ## Given a server with no operating system loaded, how quickly can you have it up ready to host virtual servers or containers? With this project, about an hour, mostly unattended.:sleeping:
 
+We have an alpha release: used by one person, in one environment.  
+
 ### Introduction
 This project uses Cobbler, and Puppet. Virtualization uses OpenVZ (future: Docker, LXC and KVM).
 
-Hardware: we use HP 1U E5620 servers with 96G RAM and a few terabytes of disk space. Future: configurable to support other types of servers. We need to experiment to learn what is the pracical minimum RAM size.
+Hardware: we use HP 1U E5620 servers with 96G RAM and a few terabytes of disk space. Future: configurable to support other types of servers (loan me another kind of server so I can port to it). We need to experiment to learn what is the practical minimum RAM size.
 
 A support server serves PXE boot, and has the Puppet master. We named it Borvo2, and you will see this name upon occasion below. Install virt-shoe on the support server Borvo2, then follow the steps below to load a blank server.
 
