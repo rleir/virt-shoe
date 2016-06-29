@@ -16,6 +16,13 @@ on the support server Borvo2, then follow the steps below to load a blank server
 
 Start with a new, blank server. Connect the network (vlan100 and 200) to the leftmost (looking from the back) RJ45 port. Connect a second network cable to the next RJ45 port. This second cable is only used during installation, and is used without vlan tagging (no configuration needed in the support server). The Mikrotik switch is set up with this port different from the others, to connect this cable with vlan200 and hence the Borvo2 server. This second cable can be disconnected after the installation is finished, but we should keep track of which Mikrotik port is used for this, ready for whenever a new server will be installed.
 
+In the Borvo2 server, /etc/cobbler/settings, find these lines and change them to the desired name and IP for the new server
+```
+## this will be the hostname of the newly installed server
+hostname: odin75.serv.virtualorgs.net
+hostIP: 10.100.2.75
+```
+
 Connect a keyboard and display. 
 
 Optionally, start a clock with a seconds hand (on any nearby desktop): 
