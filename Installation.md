@@ -15,3 +15,13 @@ Also, in activemq/activemq.xml set the password
 ```
 
 In cobbler/settings, set default_password_crypted as directed.
+
+
+We need a mirror of Fedora, Redhat, or Centos (to reduce latency, and for version control). Set up the mirror in 
+```
+/var/www/cobbler/repo_mirror/Centosbase6.3/
+/var/www/cobbler/repo_mirror/CentosUpdates/
+```
+Install /var/www/html/CentOS-Base.repo .
+Make soft links to the above dirs (this will be scripted shortly)
+
