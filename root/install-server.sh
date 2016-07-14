@@ -1,8 +1,8 @@
 #!/bin/sh
 # Starts Cobbler
 #
-# Normally this script is invoked by newPhysServer.pl
-# 
+# Normally this script is invoked by newPhysServer.pl .
+# TODO: this all should be done by newPhysServer.pl .
 if [ $# -ne 1 ]; then
   echo Usage: $0 new_server_hostname
   exit 1
@@ -15,7 +15,7 @@ new_fqdn=$1.serv.example.net
 # get the internal IP
 new_IP=`dig +short $new_fqdn`
 
-# config nagios 
+# config nagios (TODO: improve the nagios configuration)
 ssh nagios.serv.example.net 'cd /etc/nagios3/servers/hw/tools; ./generate $new_server; /etc/init.d/nagios3 reload'
 
 # Insert the new_server_fqdn in the cobbler settings file.
