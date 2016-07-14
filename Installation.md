@@ -2,9 +2,9 @@
 
 ## Install the Borvo2 support server
 
-The support server serves the PXE boot, Cobbler, and is the Puppet master. It can be a virtual server if desired. It needs to have Redhat, Fedora or Centos installed.
+The support server is the PXE boot server, so it serves Cobbler, and is the Puppet master. It can be a virtual server if desired. It needs to have Redhat, Fedora or Centos installed.
 
-Install cobbler, puppet, activemq
+Install cobbler, puppet, and activemq using yum or dnf.
 
 Compare the files in virt-shoe/etc with the default etc files, and configure as needed for your network names and IP's.
 
