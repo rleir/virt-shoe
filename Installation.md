@@ -4,7 +4,7 @@
 
 The support server is the PXE boot server, so it serves Cobbler, and is the Puppet master. It can be a virtual server if desired. It needs to have Redhat, Fedora or Centos installed.
 
-Install cobbler, puppet, and activemq using yum or dnf.
+Install cobbler, cobbler-web, puppet, and activemq using yum or dnf.
 
 Compare the files in virt-shoe/etc with the default etc files, and configure as needed for your network names and IP's.
 
