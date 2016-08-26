@@ -37,10 +37,8 @@ reboot --eject
 # System timezone
 timezone --isUtc America/Toronto
 # Network information
-network  --bootproto=static --device=eth1 --gateway=10.100.2.1 --ip=$hostIP --nameserver=10.100.2.12 --netmask=255.
-255.255.0 --onboot=on
-#network  --bootproto=static --device=eth0 --gateway=192.168.3.2 --ip=192.168.3.111 --nameserver=192.168.3.82 --net
-mask=255.255.255.0 --onboot=on
+network  --bootproto=static --device=eth1 --gateway=10.100.2.1 --ip=$hostIP --nameserver=10.100.2.12 --netmask=255.255.255.0 --onboot=on
+#network  --bootproto=static --device=eth0 --gateway=192.168.3.2 --ip=192.168.3.111 --nameserver=192.168.3.82 --netmask=255.255.255.0 --onboot=on
 
 # System bootloader configuration
 bootloader --location=mbr
