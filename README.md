@@ -37,7 +37,7 @@ If you want to skip the long POST and get to the next step, press 'ESC'. This wo
 
 **Be ready** for the ILOM options. After the PXE boot is set up, you will see a prompt for ILOM::boom: **You now have a second** to press F8.
 
-In the Network Configuration tab: Disable DHCP because we don't want to be depending on a DHCP server when things are going wrong. Other settings: 
+In the Network Configuration tab: Disable DHCP. Other settings: 
 ```
 Network Interface Adapter to 'Shared Network Port'
 Virtual LAN to Enabled
@@ -52,7 +52,7 @@ In the Settings tab: Lights-Out Functionality Enabled. Optionally [set up the IL
 
 Now that the ILOM is working, the keyboard and display are not needed, and you can access the console via the ILOM from any PC. When you reboot the server, the ILOM allows you to view the whole thing, except that you may have to restart the browser plugin when you have reset the server.
 
-Start the server. If it is not in its default state new-from-HP, then in the BIOS go to 'System Default Options' and choose the option to Restore Settings/Erase Boot Disk. If the RAID settings are not to your liking, change them.
+Start the server. If it is not in its default state new-from-HP, then in the BIOS go to 'System Default Options' and choose the option to Restore Settings/Erase Boot Disk. If the RAID settings are not to your liking, now is the time to change them.
 
 In the BIOS go to
 ```
