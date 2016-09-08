@@ -26,6 +26,11 @@ Configure Cobbler as shown here
 
 In cobbler/settings, set default_password_crypted as directed.
 
+These installation steps assume a network of 192.168.0/24,
+with the Borvo2 server at 192.168.0.8 and the gateway at .1.
+The installed systems are in the range 192.168.0.128 to 192.168.0.254.
+Modify the IP settings as necessary for your network.
+
 In cobbler/settings, set theseeeeeeeeeeeeeeeeeeeeeeeezzzz
 ```
 ## virt-shoe
